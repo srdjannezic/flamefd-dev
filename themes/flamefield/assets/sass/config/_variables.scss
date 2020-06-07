@@ -1,0 +1,55 @@
+//-------------------------
+//----------------VARIABLES
+//-------------------------
+
+//-----COLORS
+$c-black           : #000;
+$c-white           : #fff;
+$c-mainBlue        : #0b265d;
+$c-fontGrey        : #717989;
+$c-red             : #eb4f6f;
+$c-blue            : #6593f5;
+$c-mainPurple      : #472567;
+$c-mainGold        : #d2b655;
+$c-mainBaige       : #fcf8ea;
+$c-textGrey        : #030a1e;
+$c-blue            : #0b255b;
+
+
+$c-shadowPurple    : #573478;
+$c-lightGrey       : #dadada;
+$c-bgGrey          : #ebebeb;
+$c-mainGreen       : #1aa29b;
+$c-mainYellow      : #f6ed08;
+$c-simpleGrey      : #565656;
+
+
+
+
+//-----PATHS
+$localFontBase: "/flamefd-dev/themes/flamefield/assets/fonts/";
+$imgBaseUrl   : "/images/";
+
+
+//------DIMENSIONS
+$baseFontSize: 10;
+$fullWidth: 100%;
+$fullHeight: 100%;
+
+//------FONT
+$fontDefault: Arial, Helvetica, Tahoma, sans-serif;
+$baseFont: 'GillSansLight', sans-serif;
+$baseFont-bold: 'GillSansBold', sans-serif;
+
+
+$styledFont: 'LibreBaskervilleRegular';
+$styledFont-bold: 'NoeDisplay-Bold', sans-serif;
+
+
+
+//------MEDIA QUERIES
+$desktop--Large  : 1700px;
+$desktop         : 1440px;
+$tablet          : 860px;
+$mobile			 : 767px;
+

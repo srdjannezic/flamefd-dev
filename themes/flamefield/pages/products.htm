@@ -1,0 +1,17 @@
+title = "Products"
+url = "/products"
+layout = "default"
+is_hidden = 0
+
+[CategoryList]
+
+[ProductList]
+sorting = "new"
+==
+<div class="cat-list">
+{% component 'CategoryList' %}
+</div>
+
+<div class="product-list">
+{% component 'ProductList' %}
+</div>

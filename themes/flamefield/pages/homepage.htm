@@ -1,0 +1,30 @@
+title = "Homepage"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[slider]
+slide_show_id = 1
+
+[PromoBlockList]
+sorting = "default"
+
+[BrandList]
+
+[FeaturedCategoryList]
+==
+<section class="hero-slider">
+{% component 'slider' %}
+</section>
+<section class="categories-list">
+	<div class="container">
+		<h2 class="section-title">Categories</h2>
+		{% component 'FeaturedCategoryList' %}
+	</div>
+</section>
+<section class="products-list">
+    <div class="container">
+        <h2 class="section-title">Latest Products</h2>
+        {% component 'PromoBlockList' %}
+    </div>
+</section>

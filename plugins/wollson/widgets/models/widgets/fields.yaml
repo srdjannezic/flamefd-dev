@@ -1,0 +1,22 @@
+fields:
+    title:
+        label: Title
+        size: ''
+        span: left
+        type: richeditor
+    subtitle:
+        label: Subtitle
+        size: ''
+        span: left
+        type: richeditor
+    content:
+        label: Content
+        size: ''
+        span: full
+        type: richeditor
+    region:
+        label: Region
+        nameFrom: name
+        descriptionFrom: description
+        span: left
+        type: relation

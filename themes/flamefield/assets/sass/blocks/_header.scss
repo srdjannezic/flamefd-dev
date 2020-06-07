@@ -1,0 +1,70 @@
+/*-------------------------
+---------  HEADER
+--------------------------*/
+
+.header {
+	.container {
+		position: relative;
+	}
+	&__top {
+		position: relative;
+		@extend %clearfix;
+		padding: 29px 0;
+	}
+	&__bottom {
+		@extend %clearfix;
+	}
+	&__logo {
+		float: left;
+	}
+}
+
+.nav {
+	float: left;
+	margin-bottom: 3rem;
+	li {
+		display: inline-block;
+		margin-right: 5rem;
+		a {
+			font-size: 13px;
+			letter-spacing: 3px;
+			color: $c-black;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.phone {
+	@include absolute(center-vertical);
+	right: 0;
+	i{
+		margin-right: 5px;
+		color: $c-mainBlue;
+	}
+	a {
+		color: $c-mainBlue;
+	}
+}
+
+.search {
+	float: right;
+	.input-wrapper {
+		float: left;
+		margin-right: 10px;
+		border-bottom: 1px solid $c-black;
+		input {
+			width: 100%;
+		}
+	}
+	button {
+		float: right;
+		background: none;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		.icon-search:before {
+			font-size: 18px;
+			color: $c-black!important;
+		}
+	}
+}

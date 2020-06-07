@@ -1,0 +1,20 @@
+{% set obPromoBlockList = PromoBlockList.make().sort(PromoBlockList.getSorting()).active() %}
+{% if obPromoBlockList.isNotEmpty() %}
+    <div class="promo-box-list-wrapper">
+        {% for obPromoBlock in obPromoBlockList %}
+            <div class="promo-box" data-id="{{ obPromoBlock.id }}">
+                {% if obPromoBlock.preview_image is not empty %}
+                <div class="img-wrapper">
+                    <img src="{{ obPromoBlock.preview_image.path }}" title="{{ obPromoBlock.preview_image.title }}" alt="{{ obPromoBlock.preview_image.description }}">
+                </div>
+                {% endif %}
+                <h3>{{ obPromoBlock.name }}</h3>
+                <p class="promo-type">Design: Granite</p>
+                <hr/>
+                <div class="promo-text">{{ obPromoBlock.preview_text }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    <span class="slide-promo-next"><i class="icon-right-slider"></i></span>
+    <span class="slide-promo-prev"><i class="icon-left-slider"></i></span>
+{% endif %}

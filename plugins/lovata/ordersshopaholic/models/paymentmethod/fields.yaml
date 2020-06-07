@@ -1,0 +1,19 @@
+fields:
+    active:
+        label: 'lovata.toolbox::lang.field.active'
+        span: left
+        default: 1
+        type: switch
+    name:
+        label: 'lovata.toolbox::lang.field.name'
+        span: left
+        type: text
+    code:
+        label: 'lovata.toolbox::lang.field.code'
+        span: right
+        type: text
+    preview_text:
+        label: 'lovata.toolbox::lang.field.description'
+        span: full
+        type: textarea
+        size: small

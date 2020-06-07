@@ -1,0 +1,24 @@
+
+{% for desc in page.descriptions %}
+	<div class="page-description">
+		<h3 class="desc-name">{{ desc.desc_name }}</h3>
+		<p>{{ desc.desc_content|raw }}</p>
+	</div>
+{% set section_counter = section_counter + 1 %}
+{% endfor %} 
+
+{% set section_counter = 1 %}
+{% for section in page.content %}
+	{% set path = '/storage/app/media/' ~ section.image %}
+	<div class="page-section {{ row.section_type }}">
+		<div class="section-image {{ row.section_type }}">
+			<img src="{{ url(path) }}">
+		</div>
+		<div class="section-content">
+			<h3>{{ section.section_name }}</h3>
+			<b class="section_num">{{ section_counter }}</b>
+			<p>{{ section.section_content|raw }}</p>
+		</div>
+	</div>
+{% set section_counter = section_counter + 1 %}
+{% endfor %} 

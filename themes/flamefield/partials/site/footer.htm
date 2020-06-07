@@ -1,0 +1,80 @@
+[menu]
+start = "id-1"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 2
+==
+<div id="footer" class="footer">
+    <section class="brands-list">
+        <div class="container">
+            <h2 class="section-title">Brands</h2>
+            {% component 'BrandList' %}
+        </div>
+    </section>
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3 class="newsletter-title">Newsletter</h3>
+           
+                <p class="newsletter-text">Want to read more?  Sign Up Today... It’s Free!</p>
+            </div>
+            <div class="newsletter-input">
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Enter your email adress" />
+                </div>
+                <button class="newsletter-cta">Sign up</button>
+            </div|>
+        </div>
+    </section>
+    <div class="footer__main">
+        <div class="container">
+            <div class="footer__main__part">
+                <h4>Pages</h4>
+                {% component 'menu' %}
+            </div>
+            <div class="footer__main__part">
+                <h4>Products</h4>
+                 <ul class="nav nav-pills">
+                        <li class="item active">
+                            <a href="//localhost:3000/flamefd-dev" target="_self">Melamine Tableware</a>
+                        </li>
+                        <li class="item ">
+                            <a href="/products" target="_self">Acrilic Drinkware</a>
+                        </li>
+                        <li class="item ">
+                            <a href="/about-us" target="_self">Polycarbonate Drinkware</a>
+                        </li>
+                        <li class="item ">
+                            <a href="/press" target="_self">Children’s Range</a>
+                        </li>
+                        <li class="item ">
+                            <a href="/contact" target="_self">Accessories</a>
+                        </li>
+                </ul>      
+            </div>
+            <div class="footer__main__part">
+                <h4>Contact Us</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gestas. nislug.velit,pretium leo eleifend ut. Nam sed mollis sem. Curabitur quis nisi eget orci rhoncus faucibus.</p>
+            </div>
+            <div class="footer__main__part contact-info">
+               <ul>
+                   <li><a href="#"><i class="icon-mail"><span class="path1"></span><span class="path2"></span></i><h4>Email</h4><span>flamefield@btconnect.com</span></a></li>
+                   <li><a href="#"><i class="icon-phone"></i><h4>Call Us</h4><span>flamefield@btconnect.com</span></a></li>
+                   <li><a href="#"><i class="icon-fax"><span class="path1"></span><span class="path2"></i><h4>Fax</h4><span>flamefield@btconnect.com</span></a></li>
+               </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__logo">
+                <a href="/wollson">
+                    <img src="{{ url('themes/flamefield/assets/images/flamefield-logo.png') }}" alt="wollson logo">
+                </a>
+            </div>
+            <p class="copyright"> Copyright &copy;2019 Flamefield Ltd.</p>
+        </div>
+    </div>
+</div>

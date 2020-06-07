@@ -1,0 +1,17 @@
+{% set obBrandList = BrandList.make().sort().active() %}
+{% if obBrandList.isNotEmpty() %}
+    <div class="brand-list-wrapper">
+        <div class="brand-list-slider">  
+            {% for obBrand in obBrandList %}
+                <div data-id="{{ obBrand.id }}">
+                    {% if obBrand.preview_image is not empty %}
+                        <img src="{{ obBrand.preview_image.path }}" title="{{ obBrand.preview_image.title }}" alt="{{ obBrand.preview_image.description }}">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <span class="slide-brand-next"><i class="icon-right-slider"></i></span>
+        <span class="slide-brand-prev"><i class="icon-left-slider"></i></span>
+    </div>
+   
+{% endif %}

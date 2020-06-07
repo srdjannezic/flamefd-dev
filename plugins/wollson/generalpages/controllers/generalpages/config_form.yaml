@@ -1,0 +1,10 @@
+name: GeneralPages
+form: $/wollson/generalpages/models/generalpages/fields.yaml
+modelClass: Wollson\GeneralPages\Models\GeneralPages
+defaultRedirect: wollson/generalpages/generalpages
+create:
+    redirect: 'wollson/generalpages/generalpages/update/:id'
+    redirectClose: wollson/generalpages/generalpages
+update:
+    redirect: wollson/generalpages/generalpages
+    redirectClose: wollson/generalpages/generalpages

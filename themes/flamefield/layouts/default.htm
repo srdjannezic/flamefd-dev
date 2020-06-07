@@ -1,0 +1,67 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>October CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+        <div class="site-wrapper">
+            <!-- Header -->
+            <header id="layout-header" class="header">
+                <div class="container">
+                    {% partial 'site/header' %}
+                </div>
+            </header>
+
+            <!-- Content -->
+            <main id="layout-content">
+                {% page %}
+            </main>
+
+            <!-- Footer -->
+            <footer id="layout-footer">
+                {% partial 'site/footer' %}
+            </footer>
+        </div>
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/slick.min.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+        <script>
+             $('.promo-box-list-wrapper').slick({
+                dots: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                prevArrow: $('.slide-promo-prev'),
+                nextArrow: $('.slide-promo-next')
+            });
+            $('.brand-list-slider').slick({
+                dots: false,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                arrows: true,
+                prevArrow: $('.slide-brand-prev'),
+                nextArrow: $('.slide-brand-next')
+            });
+          
+        </script>
+    </body>
+</html>

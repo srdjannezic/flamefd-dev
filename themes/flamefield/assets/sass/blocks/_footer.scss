@@ -1,0 +1,104 @@
+.footer {
+
+	.nav {
+		li {
+			display: block;
+			margin-bottom: 10px;
+			margin-right: 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				font-size: 16px;
+				line-height: 1.6;
+				text-transform: initial;
+				letter-spacing: 1px;
+				color: #62646f;
+			}
+			
+		}
+	}
+	&__main {
+		@extend %clearfix;
+		padding: 36px 0 0;
+		.container {
+			border-bottom: 1px solid #091d46;
+			overflow :hidden;
+		}
+		h4 {
+			margin-bottom: 10px;
+			font-family: $baseFont-bold;
+			font-size: 16px;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+	&__main__part {
+		float: left;
+		margin-right: 8.6rem;
+		&:first-child {
+			width: 74px;
+		}
+		&:nth-child(2) {
+			width: 194px;
+		}
+		&:nth-child(3) {
+			width: 245px;
+			p {
+				line-height: 1.6;
+				color: #62646f;
+			}
+		}
+	}
+	&__logo {
+		width: 140px;
+		img {
+			width:  100%;
+		}
+	} 
+	.contact-info {
+		float: right;
+		margin-right: 0;
+		li {
+			position: relative;
+			margin-bottom: 30px;
+			padding-left: 80px;
+			i {
+				@include absolute(center-vertical);
+				left: 0;
+				font-size: 40px;
+				.path1:before {
+					color: $c-mainBlue;
+				}
+			}
+			a {
+				color: $c-black;
+			}
+			span {
+				color: #76767b;
+			}
+			.icon-phone {
+				background-color: $c-mainBlue;
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				&:before {
+					@include absolute(center);
+					font-size: 18px;
+					color: $c-white;
+				}
+			}
+		}
+	}
+	&__bottom {
+		@extend %clearfix;
+		padding: 20px 0;
+		.container {
+			position: relative;
+		}
+		.copyright {
+			@include absolute(center-vertical);
+			right: 0;
+		}
+	}
+}

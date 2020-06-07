@@ -1,0 +1,45 @@
+{% set posts = __SELF__.posts %}
+
+<ul class="post-list">
+    {% for post in posts %}
+        <li>
+            {% if post.featured_images.count %}
+                <div class="featured-images text-center">
+                    {% for image in post.featured_images %}
+                        <p>
+                            <img
+                                data-src="{{ image.filename }}"
+                                src="{{ image.path }}"
+                                alt="{{ image.description }}"
+                                style="max-width: 100%" />
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <h3>{{ post.title }}</h3>
+
+            <p class="excerpt">{{ post.summary|raw }}</p>
+            <p class="post-cta"><a href="{{ post.url }}">Find Out More</a></p>
+        </li>
+    {% else %}
+        <li class="no-data">{{ __SELF__.noPostsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

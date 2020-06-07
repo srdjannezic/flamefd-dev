@@ -1,0 +1,49 @@
+fields:
+    name:
+        label: 'Page Name'
+        span: left
+        type: text
+    descriptions:
+        label: Descriptions
+        prompt: 'Add new item'
+        span: left
+        type: repeater
+        form:
+            fields:
+                desc_name:
+                    label: Name
+                    span: auto
+                    type: text
+                desc_content:
+                    label: Content
+                    size: ''
+                    span: full
+                    type: textarea
+    content:
+        label: Sections
+        prompt: 'Add new item'
+        span: full
+        type: repeater
+        form:
+            fields:
+                section_name:
+                    label: Name
+                    span: auto
+                    type: text
+                section_content:
+                    label: Content
+                    size: ''
+                    span: full
+                    type: richeditor
+                section_type:
+                    label: 'Section Type'
+                    options:
+                        left: left
+                        right: right
+                    span: right
+                    type: dropdown
+                image:
+                    label: Image
+                    mode: file
+                    span: left
+                    type: mediafinder

@@ -1,0 +1,15 @@
+{% set obCategoryList = FeaturedCategoryList.make().active() %}
+    <div class="category-list-wrapper">
+        {% for obCategory in obCategoryList %}
+        <div class="category-item {{ obCategory.featured_size }}">
+            <a href="#dummy">
+            {% if obCategory.preview_image is not empty %}
+                <div class="img-wrapper">
+                    <img src="{{ obCategory.preview_image.getPath() }}" title="{{ obCategory.preview_image.title }}" alt="{{ obCategory.preview_image.description }}">
+                </div>
+                <h3><span>{{ obCategory.name }}</span></h3>
+            {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>

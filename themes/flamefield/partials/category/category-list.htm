@@ -1,0 +1,30 @@
+
+{% set obCategoryList = CategoryList.make().tree() %}
+    <ul class="category-list-wrapper">
+        {% for obCategory in obCategoryList %}
+
+        <li class="category-item">
+            <a href="#dummy">
+                <h3><span>{{ obCategory.name }}</span></h3>
+            </a>
+            {% if obCategory.children %}
+            <ul>
+            {% for subCategory in obCategory.children %}
+	            <a href="#dummy">
+	                <h3><span>{{ subCategory.name }}</span></h3>
+	            </a>
+	            {% if subCategory.children %}
+	            <ul>
+	            {% for subsubCategory in subCategory.children %}
+		            <a href="#dummy">
+		                <h3><span>{{ subsubCategory.name }}</span></h3>
+		            </a>
+	            {% endfor %}
+	        	</ul>
+	            {% endif %}
+            {% endfor %}
+        	</ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>

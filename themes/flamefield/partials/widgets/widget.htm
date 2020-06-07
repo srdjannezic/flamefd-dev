@@ -1,0 +1,18 @@
+==
+{% set widgets = __SELF__.widgets %}
+
+{% for item in widgets %}
+    {% if item.title %}
+    <div class="title-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+    	{{ item.title|raw }}
+        </div>
+    {% endif %}
+    <div class="text-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+    {% if item.subtitle %}
+    	{{ item.subtitle|raw }}
+    {% endif %}
+    {% if item.content %}
+    	{{ item.content|raw }}
+    {% endif %}
+    </div>
+{% endfor %}

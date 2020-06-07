@@ -1,0 +1,11 @@
+plugin:
+    name: 'wollson.generalpages::lang.plugin.name'
+    description: 'wollson.generalpages::lang.plugin.description'
+    author: Wollson
+    icon: oc-icon-file
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'General Pages'
+        url: /wollson/generalpages/generalpages
+        icon: icon-file-o
